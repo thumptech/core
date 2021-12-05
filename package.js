@@ -7,8 +7,9 @@ Package.describe({
   git: 'https://github.com/meteor-useraccounts/core.git',
 });
 
+
 Package.onUse(function(api) {
-  api.versionsFrom('METEOR@1.0.3');
+  //api.versionsFrom('METEOR@2.1.0');
 
   api.use([
     'accounts-base',
@@ -30,7 +31,7 @@ Package.onUse(function(api) {
 
   api.imply([
     'accounts-base',
-    'softwarerero:accounts-t9n@1.3.3',
+    //'meteor-accounts-t9n', //This has to be installed via npm
   ], ['client', 'server']);
 
   api.imply([
@@ -71,6 +72,7 @@ Package.onUse(function(api) {
     'lib/templates_helpers/ensure_signed_in.html',
     'lib/templates_helpers/ensure_signed_in.js',
     'lib/methods.js',
+
   ], ['client']);
 
   api.export([
